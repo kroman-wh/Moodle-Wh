@@ -878,9 +878,6 @@
                     "lbOut001PubIp": {
                         "value": "[reference('networkTemplate').outputs.lbOut001PubIp.value]"
                     },
-                    "lbOut002PubIp": {
-                        "value": "[reference('networkTemplate').outputs.lbOut002PubIp.value]"
-                    },
                     "ctlrPubIp": {
                         "value": "[reference('networkTemplate').outputs.ctlrPubIp.value]"
                     },
@@ -1325,7 +1322,6 @@
             "lbTier": "[parameters('loadBalancerTier')]",
             "lbName": "[concat('lb-',variables('resourceprefix'))]",
             "lbOutName001": "[concat('lb-out001-',variables('resourceprefix'))]",
-            "lbOutName002": "[concat('lb-out002-',variables('resourceprefix'))]",
             "lbPipName": "[concat('lb-pubip-',variables('resourceprefix'))]",
             "lbOutPipName001": "[concat('lb-outpubip001-',variables('resourceprefix'))]",
             "location": "[parameters('location')]",

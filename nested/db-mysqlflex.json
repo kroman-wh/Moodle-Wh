@@ -20,12 +20,6 @@
           },
           "type": "string"
       },
-      "lbOut002PubIp": {
-          "metadata": {
-              "description": "Outgoing Public IP address of the deployed load balancer"
-          },
-          "type": "string"
-      },
       "ctlrPubIp": {
           "metadata": {
               "description": "Public IP address of the deployed controller VM"
@@ -108,20 +102,6 @@
         "properties": {
             "startIpAddress": "[parameters('lbOut001PubIp')]",
             "endIpAddress": "[parameters('lbOut001PubIp')]"
-        }
-      },
-      {
-        "condition": "[not(parameters('moodleCommon').vnetDbDeploySwitch)]",
-        "type": "Microsoft.DBforMySQL/flexibleServers/firewallRules",
-        "apiVersion": "2021-05-01",
-        "name": "[concat(parameters('moodleCommon').serverName, '/mysqlflex-firewall-allow-lb-out002')]",
-        "dependsOn": [
-            "[concat('Microsoft.DBforMySQL/flexibleservers/', parameters('moodleCommon').serverName)]"
-        ],
-        "location": "[parameters('moodleCommon').location]",
-        "properties": {
-            "startIpAddress": "[parameters('lbOut002PubIp')]",
-            "endIpAddress": "[parameters('lbOut002PubIp')]"
         }
       },
       {
