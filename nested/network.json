@@ -220,7 +220,7 @@
             "location": "[parameters('moodleCommon').location]",
             "name": "[parameters('moodleCommon').appGwPipName]",
             "sku" : {
-                "name" : "[if(endswith(parameters('moodleCommon').appGwSkuName,'v2'),'Standard','Basic')]"
+                "name" : "[if(endswith(parameters('moodleCommon').appGwSkuName,'v2'),'Standard','Standard')]"
             },
             "properties": {                
                 "dnsSettings": {

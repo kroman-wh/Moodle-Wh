@@ -672,7 +672,7 @@
             "type": "string"
         },
         "azureSearchSku": {
-            "defaultValue": "basic",
+            "defaultValue": "free",
             "allowedValues": [
                 "free",
                 "basic",
@@ -686,7 +686,7 @@
             "type": "string"
         },
         "azureSearchReplicaCount": {
-            "defaultValue": 3,
+            "defaultValue": 1,
             "minValue": 1,
             "maxValue": 12,
             "metadata": {
@@ -773,7 +773,6 @@
         "loadBalancerSku": {
             "defaultValue": "Standard",
             "allowedValues": [
-                "Basic",
                 "Standard"
             ],
             "metadata": {
