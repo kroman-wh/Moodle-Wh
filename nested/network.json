@@ -346,9 +346,6 @@
                             "frontendIPConfigurations": [
                                 {
                                     "id": "[variables('extOutID001')]"
-                                },
-                                {
-                                    "id": "[variables('extOutID002')]"
                                 }
                             ]
                         }
