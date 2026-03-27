@@ -43,7 +43,7 @@
       {
         "type": "Microsoft.DBforMySQL/flexibleServers",
         "apiVersion": "2021-05-01",
-        "location": "centralus",
+        "location": "[parameters('moodleCommon').location]",
         "name": "[parameters('moodleCommon').serverName]",
         "sku": {
           "name": "[parameters('moodleCommon').mysqlflexSkuName]",
