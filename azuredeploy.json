@@ -245,7 +245,7 @@
                 16,
                 32
             ],
-            "defaultValue": 1,
+            "defaultValue": 2,
             "metadata": {
                 "description": "MySql/Postgresql vCores. For Basic tier, only 1 & 2 are allowed. For GeneralPurpose tier, 2, 4, 8, 16, 32 are allowed. For MemoryOptimized, 2, 4, 8, 16 are allowed."
             },
@@ -672,7 +672,7 @@
             "type": "string"
         },
         "azureSearchSku": {
-            "defaultValue": "free",
+            "defaultValue": "basic",
             "allowedValues": [
                 "free",
                 "basic",
@@ -686,7 +686,7 @@
             "type": "string"
         },
         "azureSearchReplicaCount": {
-            "defaultValue": 1,
+            "defaultValue": 3,
             "minValue": 1,
             "maxValue": 12,
             "metadata": {
@@ -773,6 +773,7 @@
         "loadBalancerSku": {
             "defaultValue": "Standard",
             "allowedValues": [
+                "Basic",
                 "Standard"
             ],
             "metadata": {
@@ -877,6 +878,9 @@
                     },
                     "lbOut001PubIp": {
                         "value": "[reference('networkTemplate').outputs.lbOut001PubIp.value]"
+                    },
+                    "lbOut002PubIp": {
+                        "value": "[reference('networkTemplate').outputs.lbOut002PubIp.value]"
                     },
                     "ctlrPubIp": {
                         "value": "[reference('networkTemplate').outputs.ctlrPubIp.value]"
@@ -1297,6 +1301,7 @@
             "extBeName": "[concat('lb-backend-',variables('resourceprefix'))]",
             "extFeName": "[concat('lb-frontend-',variables('resourceprefix'))]",
             "extOutName001": "[concat('lb-outbound001-',variables('resourceprefix'))]",
+            "extOutName002": "[concat('lb-outbound002-',variables('resourceprefix'))]",
             "extNatPool": "[concat('lb-natpool-',variables('resourceprefix'))]",
             "extProbeHTTP": "[concat('lb-probe-http-',variables('resourceprefix'))]",
             "extProbeHTTPS": "[concat('lb-probe-https-',variables('resourceprefix'))]",
@@ -1322,8 +1327,10 @@
             "lbTier": "[parameters('loadBalancerTier')]",
             "lbName": "[concat('lb-',variables('resourceprefix'))]",
             "lbOutName001": "[concat('lb-out001-',variables('resourceprefix'))]",
+            "lbOutName002": "[concat('lb-out002-',variables('resourceprefix'))]",
             "lbPipName": "[concat('lb-pubip-',variables('resourceprefix'))]",
             "lbOutPipName001": "[concat('lb-outpubip001-',variables('resourceprefix'))]",
+            "lbOutPipName002": "[concat('lb-outpubip002-',variables('resourceprefix'))]",
             "location": "[parameters('location')]",
             "moodleAdminPass": "[concat(toUpper('xl'), substring(uniqueString(resourceGroup().id, deployment().name), 6, 7),',1*8')]",
             "moodleDbName": "[parameters('moodleDbName')]",
