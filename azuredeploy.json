@@ -121,9 +121,9 @@
         },
         "moodleVersion": {
             "allowedValues": [
-                "MOODLE_405_STABLE"
+                "MOODLE_501_STABLE"
             ],
-            "defaultValue": "MOODLE_405_STABLE",
+            "defaultValue": "MOODLE_501_STABLE",
             "metadata": {
                 "description": "The Moodle version you want to install."
             },
@@ -194,9 +194,9 @@
         },
         "phpVersion": {
             "allowedValues": [
-                "8.1"
+                "8.2"
             ],
-            "defaultValue": "8.1",
+            "defaultValue": "8.2",
             "metadata": {
                 "description": "php version"
             },
@@ -285,9 +285,9 @@
         },
         "mysqlVersion": {
             "allowedValues": [
-                "8.0.21"
+                "8.4.8"
             ],
-            "defaultValue": "8.0.21",
+            "defaultValue": "8.4.8",
             "metadata": {
                 "description": "Mysql version"
             },

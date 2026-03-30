@@ -116,13 +116,13 @@ MOODLE_DATABASE_DNS="$(az deployment group show --resource-group $MOODLE_RG_NAME
 #### Database admin username
 
 ``` bash
-MOODLE_DATABASE_ADMIN_USERNAME="$(az deployment group show --resource-group $MOODLE_RG_NAME --name $MOODLE_DEPLOYMENT_NAME --out tsv --query *.outputs.databaseAdminUsername.value)"
+MOODLE_DATABASE_ADMIN_USERNAME="$(az deployment group show --resource-group $MOODLE_RG_NAME --name $MOODLE_DEPLOYMENT_NAME --out tsv --query *.outputs.mainTemplateOutputs.value.databaseAdminUsername.value)"
 ```
 
 #### Database admin password
 
 ``` bash
-MOODLE_DATABASE_ADMIN_PASSWORD="$(az deployment group show --resource-group $MOODLE_RG_NAME --name $MOODLE_DEPLOYMENT_NAME --out tsv --query *.outputs.databaseAdminPassword.value)"
+MOODLE_DATABASE_ADMIN_PASSWORD="$(az deployment group show --resource-group $MOODLE_RG_NAME --name $MOODLE_DEPLOYMENT_NAME --out tsv --query *.outputs.mainTemplateOutputs.value.databaseAdminPassword.value)"
 ```
 
 ### Retrieving Moodle Application VNET Information
@@ -130,7 +130,7 @@ MOODLE_DATABASE_ADMIN_PASSWORD="$(az deployment group show --resource-group $MOO
 First frontend VM IP:
 
 ``` bash
-MOODLE_FIRST_FRONTEND_VM_IP="$(az deployment group show --resource-group $MOODLE_RG_NAME --name $MOODLE_DEPLOYMENT_NAME --out tsv --query *.outputs.firstFrontendVmIP.value)"
+MOODLE_FIRST_FRONTEND_VM_IP="$(az deployment group show --resource-group $MOODLE_RG_NAME --name $MOODLE_DEPLOYMENT_NAME --out tsv --query *.outputs.mainTemplateOutputs.value.firstFrontendVmIP.value)"
 ```
 
 # Validation
