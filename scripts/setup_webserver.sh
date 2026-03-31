@@ -77,28 +77,29 @@ check_fileServerType_param "$fileServerType"
     unattended-upgrades \
     tuned \
     varnish \
-    php \
-    php-cli \
-    php-curl \
-    php-zip \
-    php-pear \
-    php-mbstring \
+    php8.2 \
+    php8.2-cli \
+    php8.2-curl \
+    php8.2-zip \
+    php8.2-pear \
+    php8.2-mbstring \
     mcrypt \
-    php-dev \
+    php8.2-dev \
     graphviz \
     aspell \
-    php-soap \
-    php-json \
-    php-redis \
-    php-bcmath \
-    php-ldap \
-    php-gd \
-    php-pgsql \
-    php-mysql \
-    php-xmlrpc \
-    php-intl \
-    php-xml \
-    php-bz2
+    php8.2-soap \
+    php8.2-json \
+    php8.2-redis \
+    php8.2-bcmath \
+    php8.2-ldap \
+    php8.2-gd \
+    php8.2-pgsql \
+    php8.2-mysql \
+    php8.2-xmlrpc \
+    php8.2-intl \
+    php8.2-xml \
+    php8.2-sodium \
+    php8.2-bz2
 
   # install azcopy
   wget -q -O azcopy_v10.tar.gz https://aka.ms/downloadazcopy-v10-linux && tar -xf azcopy_v10.tar.gz --strip-components=1 && mv ./azcopy /usr/bin/
