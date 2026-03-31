@@ -381,7 +381,7 @@
             ],
             "defaultValue": "Disabled",
             "metadata": {
-                "description": "High availability mode for azure database for mysql flexible server."
+            "description": "High availability mode for azure database for mysql flexible server."
             },
             "type": "string"
         },
@@ -407,7 +407,7 @@
             ],
             "defaultValue": "",
             "metadata": {
-                "description": "Availability zone of the High availability standby server. (Leave blank for No Preference). Add this value if HA is enabled."
+            "description": "Availability zone of the High availability standby server. (Leave blank for No Preference). Add this value if HA is enabled."
             },
             "type": "string"
         },
