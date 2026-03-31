@@ -98,7 +98,6 @@ check_fileServerType_param "$fileServerType"
     php-xmlrpc \
     php-intl \
     php-xml \
-    php-sodium \
     php-bz2
 
   # install azcopy
