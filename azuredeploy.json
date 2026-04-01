@@ -194,9 +194,9 @@
         },
         "phpVersion": {
             "allowedValues": [
-                "8.2"
+                "8.1"
             ],
-            "defaultValue": "8.2",
+            "defaultValue": "8.1",
             "metadata": {
                 "description": "php version"
             },
@@ -285,9 +285,9 @@
         },
         "mysqlVersion": {
             "allowedValues": [
-                "8.4"
+                "8.0.21"
             ],
-            "defaultValue": "8.4",
+            "defaultValue": "8.0.21",
             "metadata": {
                 "description": "Mysql version"
             },
